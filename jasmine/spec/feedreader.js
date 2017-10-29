@@ -112,15 +112,17 @@ $(function() {
     describe('New Feed Selection', function () {
         var initialFeedHtml;
 
-        beforeEach(function () {
+        beforeEach(function (done) {
             // load first feed
             loadFeed(0, function () {
                 initialFeedHtml = $('.feed').html();
+
+                // Load second feed
+                loadFeed(1, function () {
+                    done();
+                });
             });
-            // Load second feed
-            loadFeed(1, function () {
-                done();
-            });
+
         });
         
         it('should load new feed', function (done) {
