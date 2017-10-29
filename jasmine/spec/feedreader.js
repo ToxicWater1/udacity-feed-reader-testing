@@ -86,7 +86,7 @@ $(function() {
 
 
     /**
-    * describe test suite ""Initial Entries"
+    * describe test suite "Initial Entries"
     * */
      describe('Initial Entries', function(){
          beforeEach(function (done) {
