@@ -35,7 +35,7 @@ $(function() {
         it('should have each feed url defined and not to be empty', function () {
             for(var i=0, len=allFeeds.length; i<len; i++){
                 expect(allFeeds[i].url).toBeDefined();
-                expect(allFeeds[i].url).not.toEqual(' ');
+                expect(allFeeds[i].url.length).not.toBe(0);
             }
         });
 
