@@ -101,7 +101,7 @@ $(function() {
          */
 
         it('should loadFeed and render the entry and .feed container', function (done) {
-            expect($('.feed').has('.entry').length).not.toEqual(null);
+            expect($('.feed').has('.entry').length).not.toBe(0);
             done();
         });
      });
