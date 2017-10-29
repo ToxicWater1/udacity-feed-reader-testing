@@ -47,7 +47,7 @@ $(function() {
         it('should have each feed name defined and not to be empty', function () {
             for(var i=0, len=allFeeds.length; i<len; i++){
                 expect(allFeeds[i].name).toBeDefined();
-                expect(allFeeds[i].name).not.toBe(null);
+                expect(allFeeds[i].name.length).not.toBe(0);
             }
         });
     });
@@ -76,10 +76,10 @@ $(function() {
          */
         it('should show menu when click the menu icon link and hide the menu when click again', function () {
             MENU_BUTTON.click();
-            expect(BODY.attr('class')).not.toContain('menu-hidden');
+            expect(BODY.hasClass('menu-hidden')).toBeFalsy();
 
             MENU_BUTTON.click();
-            expect(BODY.attr('class')).toContain('menu-hidden');
+            expect(BODY.hasClass('menu-hidden')).toBeTruthy();
         });
 
     });
