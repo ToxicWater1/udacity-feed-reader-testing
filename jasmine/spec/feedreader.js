@@ -100,9 +100,8 @@ $(function() {
          * the HTML should contains at least a feed with entry
          */
 
-        it('should loadFeed and render the entry and .feed container', function (done) {
+        it('should loadFeed and render the entry and .feed container', function () {
             expect($('.feed').has('.entry').length).not.toBe(0);
-            done();
         });
      });
 
@@ -113,7 +112,7 @@ $(function() {
     describe('New Feed Selection', function () {
         var initialFeedHtml;
 
-        beforeEach(function (done) {
+        beforeEach(function () {
             // load first feed
             loadFeed(0, function () {
                 initialFeedHtml = $('.feed').html();
